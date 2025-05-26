@@ -15,7 +15,7 @@ builder.Services.AddOpenApi();
 var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
 builder.WebHost.ConfigureKestrel(serverOptions =>
 {
-    serverOptions.ListenAnyIP(int.Parse(port); // Listen on port from environment variable or default to 8080
+    serverOptions.ListenAnyIP(int.Parse(port)); // Listen on port from environment variable or default to 8080
 });
 
 var app = builder.Build();
